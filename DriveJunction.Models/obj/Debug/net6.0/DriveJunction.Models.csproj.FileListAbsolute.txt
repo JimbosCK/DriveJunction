@@ -1,0 +1,12 @@
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\bin\Debug\net6.0\DriveJunction.Models.deps.json
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\bin\Debug\net6.0\DriveJunction.Models.dll
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\bin\Debug\net6.0\DriveJunction.Models.pdb
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\DriveJunction.Models.csproj.AssemblyReference.cache
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\DriveJunction.Models.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\DriveJunction.Models.AssemblyInfoInputs.cache
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\DriveJunction.Models.AssemblyInfo.cs
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\DriveJunction.Models.csproj.CoreCompileInputs.cache
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\DriveJunction.Models.dll
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\refint\DriveJunction.Models.dll
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\DriveJunction.Models.pdb
+G:\Programming\DriveJunction\DriveJunction\DriveJunction.Models\obj\Debug\net6.0\ref\DriveJunction.Models.dll

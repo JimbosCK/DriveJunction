@@ -1,0 +1,12 @@
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\bin\Release\net6.0\DriveJunction.Shared.deps.json
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\bin\Release\net6.0\DriveJunction.Shared.dll
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\bin\Release\net6.0\DriveJunction.Shared.pdb
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\DriveJunction.Shared.csproj.AssemblyReference.cache
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\DriveJunction.Shared.GeneratedMSBuildEditorConfig.editorconfig
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\DriveJunction.Shared.AssemblyInfoInputs.cache
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\DriveJunction.Shared.AssemblyInfo.cs
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\DriveJunction.Shared.csproj.CoreCompileInputs.cache
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\DriveJunction.Shared.dll
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\refint\DriveJunction.Shared.dll
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\DriveJunction.Shared.pdb
+G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\obj\Release\net6.0\ref\DriveJunction.Shared.dll
