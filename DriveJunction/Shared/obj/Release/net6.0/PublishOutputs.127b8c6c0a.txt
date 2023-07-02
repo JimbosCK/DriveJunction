@@ -1,3 +1,0 @@
-G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\bin\Release\net6.0\publish\DriveJunction.Shared.dll
-G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\bin\Release\net6.0\publish\DriveJunction.Shared.deps.json
-G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Shared\bin\Release\net6.0\publish\DriveJunction.Shared.pdb
