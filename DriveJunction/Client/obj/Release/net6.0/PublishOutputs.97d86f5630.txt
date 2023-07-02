@@ -1,1 +1,0 @@
-G:\Programming\TCG-Life-Tracker\DriveJunction\DriveJunction\Client\bin\Release\net6.0\publish\web.config
