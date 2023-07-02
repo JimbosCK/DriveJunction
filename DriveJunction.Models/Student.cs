@@ -10,8 +10,6 @@ namespace DriveJunction.Models {
         public DateTime? DeletionDate { get; set; }
 
         public Student() {
-            CreationDate = DateTime.Now;
-
             Code = string.Empty;
             FirstName = string.Empty;
             LastName = string.Empty;
