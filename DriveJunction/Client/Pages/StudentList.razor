@@ -1,0 +1,64 @@
+﻿@page "/students"
+@using DriveJunction.Shared.View_Models;
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+
+<h3>Students</h3>
+
+
+@if (_isLoading) {
+    <div class="lds-hourglass"></div>
+} else {
+    <button class="btn btn-primary" @onclick="AddNewStudent">New Student</button>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Creation Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in _students) {
+                <tr>
+                    <td>@student.Code</td>
+                    <td>@student.FullName</td>
+                    <td>@student.PhoneNumber</td>
+                    <td>@student.CreationDate</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => EditStudent(student)">Edit</button>
+                        <button class="btn btn-danger" @onclick="() => DeleteStudent(student)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private bool _isLoading = true;
+    private List<StudentListVM> _students;
+
+    protected override async Task OnInitializedAsync() {
+       await LoadFromServer();
+        _isLoading = false;
+    }
+    private async Task LoadFromServer() {
+        _students = await httpClient.GetFromJsonAsync<List<StudentListVM>>("student") ?? new List<StudentListVM>();
+    }
+
+    private void AddNewStudent() {
+        
+    }
+    private void EditStudent(StudentListVM student) {
+        
+    }
+    private void DeleteStudent(StudentListVM student) {
+
+    }
+
+
+}

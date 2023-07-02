@@ -196,15 +196,15 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "DriveJunction.Shared.dll": "sha256-D6q41pJYbeEtC1gBbXIQ4FNajxVliCHsmbrtPefbRQY=",
-      "DriveJunction.Client.dll": "sha256-\/dDqsHWtcoAymP6YiimU3SXasq7rlRfOi3T2LOFXEmk="
+      "DriveJunction.Shared.dll": "sha256-5j0T2UnuUXx9nasrrscj5RewbD4jzYiizvpcx7qAy2o=",
+      "DriveJunction.Client.dll": "sha256-LB3mRIk5OEXJrlFx5Dym1V3Z5CB8W2\/Kh8y81FCZ8jY="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "DriveJunction.Shared.pdb": "sha256-Riwh6y9VrFycZrUSqh2vHEEGe8pEManhXlwGONEf21Q=",
-      "DriveJunction.Client.pdb": "sha256-szjizsKtSYCeFms1cFW2YxMgD5+vZcmknrLWUc4qeoE="
+      "DriveJunction.Shared.pdb": "sha256-H1PhnCCTF9HpLTScxCSP5oK0nKa5vXjBbRlpq0Jon\/g=",
+      "DriveJunction.Client.pdb": "sha256-H0gT6CAWTGMxODYCvT+bRinUeeYmUMpcTNVI605\/CPc="
     },
     "runtime": {
       "dotnet.6.0.16.malttytt63.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",
