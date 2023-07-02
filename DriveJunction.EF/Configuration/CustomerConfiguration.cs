@@ -14,7 +14,7 @@ namespace DriveJunction.EF.Configuration {
             builder.Property(student => student.FirstName).HasMaxLength(50);
             builder.Property(student => student.LastName).HasMaxLength(50);
             builder.Property(student => student.PhoneNumber).HasMaxLength(20);
-            builder.Property(student => student.CreationDate);
+            builder.Property(student => student.CreationDate).HasDefaultValueSql("getdate()");
             builder.Property(student => student.DeletionDate);
 
             builder.HasIndex(student => student.Code);
