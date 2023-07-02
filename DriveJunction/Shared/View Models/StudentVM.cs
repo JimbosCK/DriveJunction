@@ -17,6 +17,7 @@ namespace DriveJunction.Shared.View_Models {
     }
 
     public class StudentEditVM {
+        public Guid ID { get; set; }
         public string Code { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

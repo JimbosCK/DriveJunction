@@ -1,0 +1,101 @@
+﻿@page "/students/edit/{id:guid?}"
+@using DriveJunction.Shared.View_Models;
+@inject NavigationManager navigationManager
+@inject HttpClient httpClient
+
+<h3>Student Managment</h3>
+@if (_isLoading) {
+    <div class="lds-hourglass"></div>
+} else {
+    <EditForm Model="@_student" OnValidSubmit="@OnSave">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="row">
+            @if (_codeAlreadyExists) {
+                <span style="color:red">Code already exists.</span>
+            }
+            @if (_itemDoesNotExist) {
+                <span style="color:red">Item was not found.</span>
+            }
+            @if (_databaseError) {
+                <span style="color:red">Database error.</span>
+            }
+
+            <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <InputText class="form-control" id="code" @bind-Value="_student.FirstName" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Surname</label>
+                <InputText class="form-control" id="description" @bind-Value="_student.LastName" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <InputText class="form-control" id="price" @bind-Value="_student.Code" />
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Code</label>
+                <InputText class="form-control" id="price" @bind-Value="_student.PhoneNumber" />
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <button class="btn btn-success" type="submit">Save</button>
+                <button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+            </div>
+        </div>
+    </EditForm>
+}
+
+
+@code {
+    [Parameter] public Guid? id { get; set; }
+    private bool _isLoading = true;
+    private StudentEditVM _student = new();
+    private bool _codeAlreadyExists = false;
+    private bool _itemDoesNotExist = false;
+    private bool _databaseError = false;
+
+    protected override async Task OnInitializedAsync() {
+        await LoadItemsFromServer();
+        _isLoading = false;
+    }
+
+    private async Task LoadItemsFromServer() {
+        if (id.HasValue)
+            _student = await httpClient.GetFromJsonAsync<StudentEditVM>($"student/{id}") ?? new StudentEditVM();
+    }
+
+    private void OnCancel() {
+        navigationManager.NavigateTo("students");
+    }
+
+    private async Task OnSave() {
+        HttpResponseMessage response;
+        try {
+            if (id == Guid.Empty || id == null) {   // New Student
+                response = await httpClient.PostAsJsonAsync("student", _student);
+            } else {    // Edit Student
+                response = await httpClient.PutAsJsonAsync("student", _student);
+            }
+            HandleDBErrors(response);
+
+            if (ResponseSuccess(response)) {
+                navigationManager.NavigateTo("students");
+            }
+
+        } catch (Exception) {
+            _databaseError = true;
+        }
+    }
+
+    private void HandleDBErrors(HttpResponseMessage response) {
+        if ((int)response.StatusCode == 422) _codeAlreadyExists = true;
+        if ((int)response.StatusCode == 404) _itemDoesNotExist = true;
+        response.EnsureSuccessStatusCode();
+    }
+
+    private bool ResponseSuccess(HttpResponseMessage response) {
+        return (int)response.StatusCode == 200;
+    }
+}

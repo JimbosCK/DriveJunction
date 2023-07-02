@@ -1,6 +1,7 @@
 using DriveJunction.EF.AppContext;
 using DriveJunction.EF.Repositories;
 using DriveJunction.Models;
+using DriveJunction.Shared.Services;
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationContext>();
 
 builder.Services.AddScoped<IEntityRepo<Student>, StudentRepo>();
+
+
+builder.Services.AddScoped<StudentHandler>();
 
 
 var app = builder.Build();
