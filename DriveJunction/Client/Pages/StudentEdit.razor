@@ -1,7 +1,9 @@
 ﻿@page "/students/edit/{id:guid?}"
+@using DriveJunction.Shared.Services;
 @using DriveJunction.Shared.View_Models;
 @inject NavigationManager navigationManager
 @inject HttpClient httpClient
+@inject MessageLogger messageLogger
 
 <h3>Student Managment</h3>
 @if (_isLoading) {
@@ -20,6 +22,8 @@
             @if (_databaseError) {
                 <span style="color:red">Database error.</span>
             }
+
+            <span style="color:red"> @messageLogger.Log() </span>
 
             <div class="col-md-6">
                 <label class="form-label">Name</label>
@@ -86,12 +90,20 @@
 
         } catch (Exception) {
             _databaseError = true;
+            messageLogger.AddMessage(new Message("Database error.", MessageTypeEnum.Error));
         }
     }
 
     private void HandleDBErrors(HttpResponseMessage response) {
         if ((int)response.StatusCode == 422) _codeAlreadyExists = true;
         if ((int)response.StatusCode == 404) _itemDoesNotExist = true;
+
+        if ((int)response.StatusCode == 422) {
+            messageLogger.AddMessage(new Message("422. Code already exists.", MessageTypeEnum.Error));
+        }
+        if ((int)response.StatusCode == 404) {
+            messageLogger.AddMessage(new Message("404. Item was not found.", MessageTypeEnum.Error));
+        }
         response.EnsureSuccessStatusCode();
     }
 
